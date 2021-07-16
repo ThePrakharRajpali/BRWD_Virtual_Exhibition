@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+    <% projects.forEach(project => { %>
+        <%= project.name %> 
+        <br>
+        Photos 
+        <br>
+        <% project.photos.forEach(photo => { %>
+            <%= photo %>
+            <br>
+        <% }) %>
+        <%= project.title %> 
+        <br>
+        <%= project.writeup %> 
+        <br>
+        <%= project.bio %> 
+        <br>
+        <%= project.twitter %> 
+        <br>
+        <%= project.instagram %> 
+        <br>
+    <% }) %>
+</body>
+</html>

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const profileSchema = new mongoose.Schema({
+const projectSchema = new mongoose.Schema({
   name: String,
   photos: [
     {
@@ -14,4 +14,4 @@ const profileSchema = new mongoose.Schema({
   instagram: String
 });
 
-module.exports = mongoose.model("Profile", profileSchema);
+module.exports = mongoose.model("Project", projectSchema);

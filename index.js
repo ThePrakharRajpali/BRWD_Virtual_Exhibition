@@ -4,6 +4,9 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const morgan = require("morgan");
 
+// Getting routers
+const projectRouter = require("./routes/project");
+
 // Initializing the app
 const app = express();
 
@@ -45,9 +48,11 @@ app.use("/static", express.static(`${__dirname}/static`));
 // Setting view engine
 app.set("view engine", "ejs");
 
+// Setting up the routes
 app.use('/', (req, res) => {
     res.send("Hello World");
 });
+app.use('/projects', projectRouter);
 
 app.listen(3000, process.env.IP, () => {
     console.log(`Server started at http://localhost:3000/`);
