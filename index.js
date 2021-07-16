@@ -49,8 +49,11 @@ app.use("/static", express.static(`${__dirname}/static`));
 app.set("view engine", "ejs");
 
 // Setting up the routes
-app.use('/', (req, res) => {
-    res.send("Hello World");
+app.get('/', (req, res) => {
+    res.render('home');
+});
+app.get('/about', (req, res) => {
+    res.render('about');
 });
 app.use('/projects', projectRouter);
 
