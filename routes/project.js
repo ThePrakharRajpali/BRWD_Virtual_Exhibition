@@ -18,12 +18,13 @@ router.get('/', (req, res) => {
 
 // Will show project of particular by username
 router.get('/:name', (req, res) => {
-    Projects.find({ name:req.params.name }, (err, project) => {
+    Projects.find({ name: req.params.name }, (err, project) => {
         if(err) {
             throw err;
         } else {
+            console.log(project);
             res.render("project/show", {
-                project
+                project: project[0]
             });
         }
     });

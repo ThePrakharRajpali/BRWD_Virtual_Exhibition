@@ -9,18 +9,19 @@
 <body>
     <h1>Index Page</h1>
     <% projects.forEach(project => { %>
-        <%= project.name %> 
+        <a href="/projects/<%= project.name %>">
+            <%= project.name %> 
+        </a>
         <br>
         Photos 
         <br>
-        <% project.photos.forEach(photo => { %>
-            <%= photo %>
-            <br>
-        <% }) %>
-        <br>
+
         <h1>
             <%= project.title %>
         </h1> 
+
+        <img src="<%= project.photos[0] %>" alt="" height="300px">
+
         <br>
         <%= project.writeup %> 
         <br>

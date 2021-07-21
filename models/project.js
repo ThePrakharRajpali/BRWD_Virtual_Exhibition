@@ -11,7 +11,8 @@ const projectSchema = new mongoose.Schema({
   writeup: String,
   bio: String,
   twitter: String,
-  instagram: String
+  instagram: String,
+  index: Number
 });
 
 module.exports = mongoose.model("Project", projectSchema);
