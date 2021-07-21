@@ -22,8 +22,9 @@ router.get('/:name', (req, res) => {
         if(err) {
             throw err;
         } else {
+            console.log(project);
             res.render("project/show", {
-                project
+                project: project[0]
             });
         }
     });
