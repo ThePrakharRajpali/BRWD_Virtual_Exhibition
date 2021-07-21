@@ -16,8 +16,7 @@
     Photos
     <br>
     <% project.photos.forEach(photo=> { %>
-        <%= photo %>
-        <br>
+        <img src="<%= photo %>" alt="<%= photo %>" height="300px">
     <% }) %>
     <%= project.title %>
     <br>

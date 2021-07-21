@@ -47,6 +47,8 @@ app.use(morgan("dev"));
 app.use(express.static(`${__dirname}/public`));
 app.use(express.static(`${__dirname}/static`));
 app.use("/static", express.static(`${__dirname}/static`));
+app.use(express.static(`${__dirname}/Exhibition`));
+app.use("/Exhibition", express.static(`${__dirname}/Exhibition`));
 
 // Setting view engine
 app.set("view engine", "ejs");
