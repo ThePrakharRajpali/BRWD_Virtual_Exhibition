@@ -7,6 +7,9 @@ const morgan = require("morgan");
 // Getting routers
 const projectRouter = require("./routes/project");
 
+// Import database populator and depopulator
+const { populateDB, clearDB } = require('./populate.js');
+
 // Initializing the app
 const app = express();
 
@@ -47,6 +50,12 @@ app.use("/static", express.static(`${__dirname}/static`));
 
 // Setting view engine
 app.set("view engine", "ejs");
+
+// Clear Database
+// clearDB();
+
+// Populate Database.
+// populateDB();
 
 // Setting up the routes
 app.get('/', (req, res) => {
