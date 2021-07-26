@@ -9,28 +9,31 @@
 <body>
     <h1>Index Page</h1>
     <% projects.forEach(project => { %>
-        <a href="/projects/<%= project.name %>">
-            <%= project.name %> 
-        </a>
-        <br>
-        Photos 
-        <br>
-
-        <h1>
-            <%= project.title %>
-        </h1> 
-
-        <img src="<%= project.photos[0] %>" alt="" height="300px">
-
-        <br>
-        <%= project.writeup %> 
-        <br>
-        <%= project.bio %> 
-        <br>
-        <%= project.twitter %> 
-        <br>
-        <%= project.instagram %> 
-        <br>
+        <div>
+            <a href="/projects/<%= project.name %>">
+                <%= project.name %> 
+            </a>
+            <br>
+            Photos 
+            <br>
+    
+            <h1>
+                <%= project.title %>
+            </h1> 
+    
+            <img src="<%= project.photos[0] %>" alt="" height="300px">
+    
+            <br>
+            <%= project.writeup %> 
+            <br>
+            <%= project.bio %> 
+            <br>
+            <%= project.twitter %> 
+            <br>
+            <%= project.instagram %> 
+            <br>
+        </div>
+        
     <% }) %>
 </body>
 </html>
