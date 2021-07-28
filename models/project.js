@@ -12,6 +12,7 @@ const projectSchema = new mongoose.Schema({
   bio: String,
   twitter: String,
   instagram: String,
+  email: String,
   index: Number
 });
 

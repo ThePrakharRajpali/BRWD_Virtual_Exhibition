@@ -1,39 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Index Page</h1>
-    <% projects.forEach(project => { %>
-        <div>
-            <a href="/projects/<%= project.name %>">
-                <%= project.name %> 
-            </a>
-            <br>
-            Photos 
-            <br>
-    
-            <h1>
-                <%= project.title %>
-            </h1> 
-    
-            <img src="<%= project.photos[0] %>" alt="" height="300px">
-    
-            <br>
-            <%= project.writeup %> 
-            <br>
-            <%= project.bio %> 
-            <br>
-            <%= project.twitter %> 
-            <br>
-            <%= project.instagram %> 
-            <br>
+<%- include("../partials/pretitle.ejs") %>
+  <title>Projects</title>
+<%- include("../partials/posttitle.ejs") %>
+
+<body class="body-3">
+    <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar-2 w-nav">
+        <div class="container w-container">
+          <a href="/" data-w-id="ed6f311c-5eec-fd4d-bb3c-a3601cef268a" class="brand w-nav-brand"><img src="/images/placeholder.svg" loading="lazy" alt="">
+            <div data-w-id="ed6f311c-5eec-fd4d-bb3c-a3601cef268c" style="opacity:0.5" class="navtext">Brahmaputra Water Diplomacy</div>
+          </a>
+          <nav role="navigation" class="nav-menu w-nav-menu">
+            <a href="/about" data-w-id="ed6f311c-5eec-fd4d-bb3c-a3601cef268f" style="opacity:0.5" class="nav-link navtext w-nav-link">About US</a>
+          </nav>
+          <div class="menu-button w-nav-button">
+            <div class="w-icon-nav-menu"></div>
+          </div>
         </div>
-        
-    <% }) %>
-</body>
-</html>
+        <div class="section-2 wf-section"></div>
+      </div>
+      <div class="cursor-wrapper">
+        <div class="cursor"></div>
+      </div>
+      <div class="cursorbg">
+        <div class="cursor-2"><img src="/images/back-ellipse.svg" loading="lazy" alt=""></div>
+      </div>
+    
+      <div class="div-block-8">
+        <div class="div-block-7 outreachtext">
+          <a data-w-id="78b7b2ad-3df0-8c22-bdfd-7307a15d03d6" style="opacity:0.5" href="/" class="outreachtext back">Back</a>
+        </div>
+        <div class="div-block-9"></div>
+      </div>
+      <div data-w-id="e67225e3-86ab-a8b5-f336-372e2619dc8b" class="track wf-section">
+        <div class="camera">
+          <div class="frame">
+            <% projects.forEach(project => { %>
+              <div class="item">
+                <div class="div-block-14">
+                  <div data-w-id="394a05ae-3c34-296b-9370-0700294be0a5" class="div-block-16"><img src="/images/IMG1.png" loading="lazy" srcset="/images/IMG1-p-500.png 500w, /images/IMG1.png 600w" sizes="(max-width: 767px) 90vw, (max-width: 991px) 80vw, 50vw" alt="" class="photoframe"></div>
+                  <div class="div-block-12">
+                    <div class="div-block-11"><img src="/images/indexbg.svg" loading="lazy" alt="" class="image-23">
+                      <div class="text-block-7">24/41</div>
+                    </div>
+                    <div class="div-block-13"></div>
+                    <div class="w-layout-grid grid-2">
+                      <h4 id="w-node-f940dafc-d256-f028-05f8-4b2422ab9e1d-a662d0d5" class="heading-2">Bewildering Serinity Breeding Chaos Within</h4>
+                      <div id="w-node-f940dafc-d256-f028-05f8-4b2422ab9e1f-a662d0d5" class="text-block-8">by : Harry Patel</div>
+                      <a id="w-node-f940dafc-d256-f028-05f8-4b2422ab9e21-a662d0d5" data-w-id="f940dafc-d256-f028-05f8-4b2422ab9e21" style="opacity:0.5" href="#" class="link">Know more</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="div-block-15"></div>
+            <% }) %>         
+          </div>
+        </div>
+      </div>
+      <script src="/js/jquery.js" crossorigin="anonymous"></script>
+      <script src="/js/webflow.js" type="text/javascript"></script>
+<%- include("../partials/footer.ejs") %>

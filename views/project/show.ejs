@@ -1,33 +1,167 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include("../partials/pretitle.ejs") %>
+    <title>
+        <%= project.name %>
+    </title>
+<%- include("../partials/posttitle.ejs") %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <body class="body-4">
+        <div class="cursor-wrapper">
+            <div class="cursor"></div>
+        </div>
+        <div class="cursorbg">
+            <div class="cursor-2"><img src="/images/back-ellipse.svg" loading="lazy" alt=""></div>
+        </div>
+        <div data-collapse="medium" data-animation="default" data-duration="300" data-easing="ease-in"
+            data-easing2="ease-out" data-doc-height="1" role="banner" class="navbar greytext w-nav">
+            <div class="container w-container">
+                <a href="/" data-w-id="ec0e3791-3aa1-66e8-0f37-908fcfdaa002" class="brand w-nav-brand">
+                    <img src="/images/placeholder.svg" loading="lazy" alt="">
+                    <div data-w-id="ec0e3791-3aa1-66e8-0f37-908fcfdaa004" class="navtext">Brahmaputra Water
+                        Diplomacy
+                    </div>
+                </a>
+                <nav role="navigation" class="nav-menu w-nav-menu">
+                    <a href="/about" data-w-id="ec0e3791-3aa1-66e8-0f37-908fcfdaa007"
+                        class="nav-link navtext w-nav-link">
+                        About US
+                    </a>
+                </nav>
+                <div class="menu-button w-nav-button">
+                    <div class="w-icon-nav-menu"></div>
+                </div>
+            </div>
+            <div class="section-2 wf-section"></div>
+        </div>
 
-<body>
-    <h1>Show Page</h1>
+        <div class="noise"><img src="/images/noise.png" loading="lazy" sizes="100vw"
+                srcset="/images/noise-p-500.png 500w, /images/noise-p-800.png 800w, /images/noise-p-1080.png 1080w, /images/noise.png 1440w"
+                alt="" class="image-4"></div>
+        <div class="div-block-34 aboutsectiontext">
+            <div class="div-block-22"></div>
+            <div class="div-block-24 overlay">
+                <div class="text-block-12">About Me</div>
+                <div class="text-block-13">
+                    Hi, I am <%= project.name %>
+                </div>
+                <div class="text-block-9">
+                    <%= project.bio %><br>
+                </div>
+                <div class="div-block-39">
+                    <% if(project.twitter !=="" ) { %>
+                        <a href="https://www.twitter.com/<%= project.twitter %>" target="_blank"
+                            class="outreachtext">Twitter</a><img src="/images/slash.svg" loading="lazy" alt="">
+                    <% } %>
 
-    <%= project.name %>
-    <br>
-    Photos
-    <br>
-    <% project.photos.forEach(photo=> { %>
-        <img src="<%= photo %>" alt="<%= photo %>" height="300px">
-    <% }) %>
-    <%= project.title %>
-    <br>
-    <%= project.writeup %>
-    <br>
-    <%= project.bio %>
-    <br>
-    <%= project.twitter %>
-    <br>
-    <%= project.instagram %>
-    <br>
-</body>
+                    <% if(project.instagram !=="" ) { %>
+                        <a href="https://www.instagram.com/<%= project.instagram %>" target="_blank"
+                            class="outreachtext">Instagram</a><img src="/images/slash.svg" loading="lazy"
+                            alt="">
+                    <% } %>
 
-</html>
+                    <% if(project.email && project.email !=="" ) { %>
+                        <a href="mailto:<%= project.email %>" class="outreachtext">Email</a>
+                    <% } %>
+
+                </div>
+            </div>
+            <div class="div-block-22"></div>
+            <div class="div-block-37"><img src="/images/close.svg" loading="lazy" style="opacity:0.5"
+                data-w-id="294e0a91-d4e0-817e-5953-dba3a93e7ed6" alt="" class="gayab">
+                <img src="/images/The-River-of-Hope--Sorrow-VERTI.svg" loading="lazy" alt="" class="image-27">
+                <div class="div-block-40"></div>
+            </div>
+            <div class="div-block-22"></div>
+        </div>
+        <div style="opacity:0;display:none" class="div-block-35"></div>
+
+        <div class="div-block-21">
+            <div class="div-block-22"></div>
+            <div class="div-block-24">
+                <div class="div-block-31">
+                    <div class="div-block-29">
+                        <a data-w-id="b986e8e1-e957-a503-1637-80b9ec81e7c7" style="opacity:0.5" href="/projects"
+                            class="link-3">Back</a>
+                    </div>
+                </div>
+                <div class="div-block-23">
+                    <div class="div-block-27">
+                        <img src="/images/indexbg.svg" loading="lazy" alt="" class="image-25">
+                        <div class="text-block-11">
+                            <%= project.index %>/41
+                        </div>
+                    </div>
+                    <div class="div-block-26"></div>
+                    <div class="text-block-10">
+                        <%= project.title %>
+                    </div>
+                </div>
+                <div class="text-block-9 maintext">
+                    <%= project.writeup %>
+                </div>
+                <div class="div-block-25">
+                    <a data-w-id="e4bda710-e5c8-da1c-3dc1-a01e948cd41d" style="opacity:0.5" href="#"
+                        class="link-2">by : <%= project.name %></a>
+                </div>
+            </div>
+            <div class="div-block-22"></div>
+            <div class="div-block-33">
+                <div class="div-block-36">
+                    <a href="#" data-w-id="2b731220-b28a-8d23-7756-d62193f6374c"
+                        class="w-inline-block w-lightbox">
+                        <img src="<%= project.photos[0] %>" loading="eager"
+                            srcset="<%= project.photos[0] %> 500w, <%= project.photos[0] %> 800w, <%= project.photos[0] %> 813w"
+                            sizes="(max-width: 991px) 90vw, 60vw" alt="" class="photoframe mainphoto">
+                        <% filename = project.photos[0].split('/')[3] %>
+                        <script type="application/json" class="w-json">{
+                            "items": [
+                                {
+                                    "width": 813,
+                                    "caption": "",
+                                    "height": 542,
+                                    "url": "<%= project.photos[0] %>",
+                                    "_id": "60fd136e1d0a1df987682085",
+                                    "type": "image",
+                                    "fileSize": 663610
+                                }
+                            ],
+                            "group": "abc"
+                        }</script>
+                    </a>
+                </div>
+                    
+                <div class="div-block-32">
+                        
+                    <% project.photos.forEach((photo, idx) => { %>
+                        <% filename = photo.split('/')[3] %>
+                        <% if(idx !== 0) { %>
+                            <a href="#" class="smallphoto w-inline-block w-lightbox">
+                                <img
+                                    src="<%= photo %>" loading="lazy"
+                                    sizes="(max-width: 479px) 21vw, (max-width: 767px) 20vw, (max-width: 991px) 19vw, 12vw"
+                                    srcset="<%= photo %> 500w, <%= photo %> 600w"
+                                    alt="" class="image-26">
+                                <script type="application/json" class="w-json">{
+                                    "items": [
+                                        {
+                                            "type": "image",
+                                            "_id": "60fd136e6b8c12494203830e",
+                                            "width": 600,
+                                            "height": 401,
+                                            "fileSize": 465048,
+                                            "url": "<%= photo %>"
+                                        }
+                                    ],
+                                    "group": "abc"
+                                }</script>
+                            </a>
+                        <% } %>
+                    <% }) %>       
+                    
+                </div>
+            </div>
+            <div class="div-block-22"></div>
+        </div>
+
+        <script src="/js/jquery.js" crossorigin="anonymous"></script>
+        <script src="/js/webflow.js" type="text/javascript"></script>
+<%- include("../partials/footer.ejs") %>

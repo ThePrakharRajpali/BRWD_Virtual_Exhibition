@@ -43,15 +43,18 @@ app.use(express.urlencoded({ extended: true }));
 // Devtool for logging the requests
 app.use(morgan("dev"));
 
-// Serving static files
-app.use(express.static(`${__dirname}/public`));
-app.use(express.static(`${__dirname}/static`));
-app.use("/static", express.static(`${__dirname}/static`));
-app.use(express.static(`${__dirname}/Exhibition`));
-app.use("/Exhibition", express.static(`${__dirname}/Exhibition`));
-
 // Setting view engine
 app.set("view engine", "ejs");
+
+// Serving static files
+app.use(express.static(`${__dirname}/public`));
+
+// for serving static html
+app.use(express.static(`${__dirname}/static`));
+app.use("/static", express.static(`${__dirname}/static`));
+// for exhibition photos
+app.use(express.static(`${__dirname}/Exhibition`));
+app.use("/Exhibition", express.static(`${__dirname}/Exhibition`));
 
 // Clear Database
 // clearDB();
