@@ -14,7 +14,8 @@ const { populateDB, clearDB } = require('./populate.js');
 const app = express();
 
 // Setting up mongoose connection
-const uri = "mongodb://localhost:27017/brwd";
+const uri = "mongodb+srv://Prakhar:PrakharRajpali@cluster0.jsium.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+// "mongodb://localhost:27017/brwd";
 
 mongoose
   .connect(uri, {
