@@ -21,7 +21,7 @@
 <body class="body-3">
   <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar-2 w-nav">
     <div class="container w-container">
-      <a href="/" data-w-id="ed6f311c-5eec-fd4d-bb3c-a3601cef268a" class="brand w-nav-brand"><img src="images/placeholder.svg" loading="lazy" alt="">
+      <a href="/" data-w-id="ed6f311c-5eec-fd4d-bb3c-a3601cef268a" class="brand w-nav-brand"><img src="/images/placeholder.svg" loading="lazy" alt="">
         <div data-w-id="ed6f311c-5eec-fd4d-bb3c-a3601cef268c" style="opacity:0.5" class="navtext">Brahmaputra Water Diplomacy</div>
       </a>
       <nav role="navigation" class="nav-menu w-nav-menu">
@@ -53,14 +53,15 @@
         <% projects.forEach(project => { %>
           <div class="item">
             <div class="div-block-14">
-              <div data-w-id="394a05ae-3c34-296b-9370-0700294be0a5" class="div-block-16"><img src="<%= project.photos[0] %>" loading="lazy" srcset="<%= project.photos[0] %> 500w, <%= project.photos[0] %> 600w" sizes="(max-width: 767px) 90vw, (max-width: 991px) 80vw, 50vw" style="max-height: 600px; max-width: 900px; height: auto; width: auto; display: block;" alt="" class="photoframe"></div>
+              <div data-w-id="394a05ae-3c34-296b-9370-0700294be0a5" class="div-block-16"><img src="<%= project.photos[0] %>" loading="lazy" srcset="<%= project.photos[0] %> 500w, <%= project.photos[0] %> 600w" sizes="(max-width: 767px) 90vw, (max-width: 991px) 80vw, 50vw"  alt="" class="photoframe"></div>
               <div class="div-block-12">
                 <div class="div-block-11"><img src="/images/indexbg.svg" loading="lazy" alt="" class="image-23">
                   <div class="text-block-7"><%= project.index %>/41</div>
                 </div>
                 <div class="div-block-13"></div>
                 <div class="w-layout-grid grid-2">
-                  <h4 id="w-node-f940dafc-d256-f028-05f8-4b2422ab9e1d-a662d0d5" class="heading-2"><%= project.title %></h4>
+                  
+                  <h4 id="w-node-f940dafc-d256-f028-05f8-4b2422ab9e1d-a662d0d5" class="heading-2"><%= project.title.substring(0, 60) %><%= project.title.length >= 60 ? "..." : ""  %></h4>
                   <div id="w-node-f940dafc-d256-f028-05f8-4b2422ab9e1f-a662d0d5" class="text-block-8">by : <%= project.name %></div>
                   <a id="w-node-f940dafc-d256-f028-05f8-4b2422ab9e21-a662d0d5" data-w-id="f940dafc-d256-f028-05f8-4b2422ab9e21" style="opacity:0.5" href="/projects/<%= project.name %>" class="link">Know more</a>
                 </div>
