@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
         if(err) {
             throw err;
         } else {
+            projects.sort((a, b) => a.index - b.index);
             res.render("project/index", {
                 projects,
             });
